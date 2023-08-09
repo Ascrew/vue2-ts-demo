@@ -5,9 +5,14 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/',
+    path: '/demo',
     name: 'demo',
-    component: () => import('@/views/AdaptivePics/index.vue'),
+    component: () => import('@/views/Grid/index.vue'),
+  },
+  {
+    path: '/gridLayout',
+    name: 'GridLayoutDemo',
+    component: () => import('@/views/GridLayout/index.vue'),
   },
 ]
 

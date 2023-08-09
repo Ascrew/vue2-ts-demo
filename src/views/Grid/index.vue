@@ -8,10 +8,16 @@
 <template>
   <main class="grid">
     <section class="top">
-      <div class="box__wrapper" v-for="(item, index) in list" :key="index">
+      <button class="btn" @click="goToDemo">测试</button>
+      <div v-for="(item, index) in firstList" :key="index">
+        <div v-for="(item, index) in secondList" :key="item">
+          {{ index }}
+        </div>
+      </div>
+      <!-- <div class="box__wrapper" v-for="(item, index) in list" :key="index">
         <div class="box__title">{{ item.title }}</div>
         <div class="box__num">{{ item.num }}</div>
-      </div>
+      </div> -->
     </section>
   </main>
 </template>
@@ -40,6 +46,12 @@ export default class extends Vue {
       num: '10000',
     },
   ]
+  public goToDemo() {
+    this.$router.push('/gridLayout')
+  }
+
+  public firstList = [1, 2, 3, 4]
+  public secondList = ['1', '2', '3']
 }
 </script>
 <style lang="stylus" scoped>

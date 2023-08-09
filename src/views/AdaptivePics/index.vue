@@ -20,42 +20,21 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+
+let NUM = 20
+
 @Component({
   name: 'AdaptivePics',
 })
 export default class extends Vue {
-  private picList: any = [
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-    {
-      url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?cs=srgb&dl=pexels-anna-shvets-4587991.jpg&fm=jpg',
-    },
-  ]
+  private picList: { url: string }[] = []
+  mounted() {
+    for (let i = 0; i < NUM; i++) {
+      this.picList.push({
+        url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg',
+      })
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
