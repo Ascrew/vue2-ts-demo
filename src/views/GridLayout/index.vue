@@ -22,4 +22,7 @@ import Detail from './detail/index.vue'
 })
 export default class extends Vue {}
 </script>
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.grid-layout
+  margin-right 10px
+</style>

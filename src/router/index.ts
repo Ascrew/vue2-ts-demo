@@ -5,6 +5,11 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
+    path: '/',
+    name: 'Dialog',
+    component: () => import('@/views/Dialog/index.vue'),
+  },
+  {
     path: '/demo',
     name: 'demo',
     component: () => import('@/views/Grid/index.vue'),
