@@ -19,20 +19,20 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
 
-let NUM = 20
+let NUM = 20;
 
 @Component({
   name: 'AdaptivePics',
 })
 export default class extends Vue {
-  private picList: { url: string }[] = []
+  private picList: { url: string }[] = [];
   mounted() {
     for (let i = 0; i < NUM; i++) {
       this.picList.push({
         url: 'https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg',
-      })
+      });
     }
   }
 }

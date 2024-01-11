@@ -34,8 +34,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import VueGridLayout from 'vue-grid-layout'
+import { Component, Vue } from 'vue-property-decorator';
+import VueGridLayout from 'vue-grid-layout';
 @Component({
   name: 'GridLayoutDemo',
   components: {
@@ -65,7 +65,7 @@ export default class extends Vue {
     { x: 10, y: 4, w: 2, h: 2, i: '17' },
     { x: 0, y: 9, w: 2, h: 3, i: '18' },
     { x: 2, y: 6, w: 2, h: 2, i: '19' },
-  ]
+  ];
 }
 </script>
 <style lang="stylus" scoped></style>

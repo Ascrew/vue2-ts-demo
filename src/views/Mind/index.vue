@@ -20,8 +20,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import 'jsmind/style/jsmind.css'
+import { Component, Vue } from 'vue-property-decorator';
+import 'jsmind/style/jsmind.css';
 
 @Component({
   name: 'mind',
@@ -84,7 +84,7 @@ export default class HomeView extends Vue {
         },
       ],
     },
-  }
+  };
   private options = {
     container: 'jsmind_container', // [必选] 容器的ID
     editable: false, // [可选] 是否启用编辑
@@ -104,7 +104,7 @@ export default class HomeView extends Vue {
     shortcut: {
       enable: false, // 是否启用快捷键 默认为true
     },
-  }
+  };
 }
 </script>
 <style scoped>

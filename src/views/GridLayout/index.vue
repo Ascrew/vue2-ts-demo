@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Detail from './detail/index.vue'
+import { Component, Vue } from 'vue-property-decorator';
+import Detail from './detail/index.vue';
 @Component({
   name: 'GridLayoutDemo',
   components: {

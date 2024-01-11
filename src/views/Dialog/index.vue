@@ -7,14 +7,14 @@
 -->
 <template>
   <main class="zy-dialog">
-    <el-button type="primary" @click="openDialog">打开弹窗</el-button>
-    <dialog :visible.sync="dialogVisible"></dialog>
+    <el-button type="primary" @click="openDialog()">打开弹窗</el-button>
+    <Dialog ref="dialogRef"></Dialog>
   </main>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Dialog from './components/dialog/index.vue'
+import { Component, Vue } from 'vue-property-decorator';
+import Dialog from './components/dialog/index.vue';
 @Component({
   name: 'ZyDialog',
   components: {
@@ -22,9 +22,12 @@ import Dialog from './components/dialog/index.vue'
   },
 })
 export default class extends Vue {
-  public dialogVisible = false
+  mounted() {
+    console.log('test');
+  }
+  public dialogVisible = false;
   public openDialog() {
-    this.dialogVisible = true
+    (this.$refs.dialogRef as any).dialogVisible = true;
   }
 }
 </script>

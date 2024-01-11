@@ -1,13 +1,13 @@
-import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
+import Vue from 'vue';
+import VueRouter, { RouteConfig } from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Dialog',
-    component: () => import('@/views/Dialog/index.vue'),
+    name: 'Swiper',
+    component: () => import('@/views/Popover/index.vue'),
   },
   {
     path: '/demo',
@@ -19,10 +19,10 @@ const routes: Array<RouteConfig> = [
     name: 'GridLayoutDemo',
     component: () => import('@/views/GridLayout/index.vue'),
   },
-]
+];
 
 const router = new VueRouter({
   routes,
-})
+});
 
-export default router
+export default router;

@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
 @Component({
   name: 'Grid',
 })
@@ -45,13 +45,13 @@ export default class extends Vue {
       title: '1',
       num: '10000',
     },
-  ]
+  ];
   public goToDemo() {
-    this.$router.push('/gridLayout')
+    this.$router.push('/gridLayout');
   }
 
-  public firstList = [1, 2, 3, 4]
-  public secondList = ['1', '2', '3']
+  public firstList = [1, 2, 3, 4];
+  public secondList = ['1', '2', '3'];
 }
 </script>
 <style lang="stylus" scoped>

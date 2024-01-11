@@ -20,8 +20,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import { MergeTable } from './modal'
+import { Component, Vue } from 'vue-property-decorator';
+import { MergeTable } from './modal';
 @Component({
   name: 'MergeTable',
 })
@@ -44,8 +44,8 @@ export default class extends Vue {
       label: '内容',
       width: '100',
     },
-  ]
-  private tableData: MergeTable[] = []
+  ];
+  private tableData: MergeTable[] = [];
 
   mounted() {
     this.tableData = [
@@ -97,74 +97,74 @@ export default class extends Vue {
         type: 'type4',
         content: '888',
       },
-    ]
-    this.rowspan()
+    ];
+    this.rowspan();
   }
 
   private row = {
     a: 1,
     b: 2,
-  }
-  private spanArr: number[] = []
-  private position = 0
+  };
+  private spanArr: number[] = [];
+  private position = 0;
 
-  private spanArr1: number[] = []
-  private position1 = 0
+  private spanArr1: number[] = [];
+  private position1 = 0;
 
   private rightSpanMethod({ rowIndex, columnIndex }: any) {
     //通过判断某一列是否需要合并相同的添加不同if条件
     if (columnIndex === 0) {
-      const _row = this.spanArr[rowIndex] //spanArr为控制合并几行的数组eg:[4, 0, 0, 0, 4, 0, 0, 0, 2, 0]
-      const _col = _row > 0 ? 1 : 0 //合并的行数大于0那就只有一列，小于0就列数为0,相当于没了
+      const _row = this.spanArr[rowIndex]; //spanArr为控制合并几行的数组eg:[4, 0, 0, 0, 4, 0, 0, 0, 2, 0]
+      const _col = _row > 0 ? 1 : 0; //合并的行数大于0那就只有一列，小于0就列数为0,相当于没了
       return {
         rowspan: _row,
         colspan: _col,
-      }
+      };
     }
     if (columnIndex === 1) {
-      const _row = this.spanArr1[rowIndex]
-      const _col = _row > 0 ? 1 : 0
+      const _row = this.spanArr1[rowIndex];
+      const _col = _row > 0 ? 1 : 0;
       return {
         rowspan: _row,
         colspan: _col,
-      }
+      };
     }
   }
   private rowspan() {
     this.tableData.forEach((item, index) => {
       if (index === 0) {
         //首次遍历获取得到的数据，将第一行数据控制合并行数的数组push(1)，表示合并一行
-        this.spanArr.push(1)
-        this.position = 0
+        this.spanArr.push(1);
+        this.position = 0;
 
-        this.spanArr1.push(1)
-        this.position1 = 0
+        this.spanArr1.push(1);
+        this.position1 = 0;
       } else {
         if (this.tableData[index].nd === this.tableData[index - 1].nd) {
-          this.spanArr[this.position] += 1 //只要sDtsend(发放月份)字段相等，spanArr的第index个元素就加1表示合并一行
-          this.spanArr.push(0) //被合并的行要push(0)表示没了被合并了
+          this.spanArr[this.position] += 1; //只要sDtsend(发放月份)字段相等，spanArr的第index个元素就加1表示合并一行
+          this.spanArr.push(0); //被合并的行要push(0)表示没了被合并了
           if (this.tableData[index].type === this.tableData[index - 1].type) {
-            this.spanArr1[this.position1] += 1 //只要sDtsend(发放月份)字段相等，spanArr的第index个元素就加1表示合并一行
-            this.spanArr1.push(0) //被合并的行要push(0)表示没了被合并了
+            this.spanArr1[this.position1] += 1; //只要sDtsend(发放月份)字段相等，spanArr的第index个元素就加1表示合并一行
+            this.spanArr1.push(0); //被合并的行要push(0)表示没了被合并了
           } else {
-            this.spanArr1.push(1) //push(1)是因为行不合并也是从1行开始
-            this.position1 = index //等于index表示从不等的那一行序号开始从1往上加
+            this.spanArr1.push(1); //push(1)是因为行不合并也是从1行开始
+            this.position1 = index; //等于index表示从不等的那一行序号开始从1往上加
           }
         } else {
           //直到某字段不等时，改变position值
-          this.spanArr.push(1) //push(1)是因为行不合并也是从1行开始
-          this.position = index //等于index表示从不等的那一行序号开始从1往上加
+          this.spanArr.push(1); //push(1)是因为行不合并也是从1行开始
+          this.position = index; //等于index表示从不等的那一行序号开始从1往上加
 
-          this.spanArr1.push(1) //push(1)是因为行不合并也是从1行开始
-          this.position1 = index //等于index表示从不等的那一行序号开始从1往上加
+          this.spanArr1.push(1); //push(1)是因为行不合并也是从1行开始
+          this.position1 = index; //等于index表示从不等的那一行序号开始从1往上加
         }
       }
-    })
+    });
 
-    console.log('listen spanarr', this.spanArr)
-    console.log('listen position', this.position)
-    console.log('listen spanarr1', this.spanArr1)
-    console.log('listen position1', this.position1)
+    console.log('listen spanarr', this.spanArr);
+    console.log('listen position', this.position);
+    console.log('listen spanarr1', this.spanArr1);
+    console.log('listen position1', this.position1);
   }
 }
 </script>

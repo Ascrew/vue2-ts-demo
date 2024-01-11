@@ -120,19 +120,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 
 @Component
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string
+  @Prop() private msg!: string;
 
   mounted() {
-    console.log('listen mes in helloworld mounted', this.msg)
+    console.log('listen mes in helloworld mounted', this.msg);
   }
 
   @Watch('msg', { immediate: true })
   watchMsg(val: string) {
-    console.log('listen msg in helloworkd watch', val)
+    console.log('listen msg in helloworkd watch', val);
   }
 }
 </script>

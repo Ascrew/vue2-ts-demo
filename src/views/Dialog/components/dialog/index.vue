@@ -7,20 +7,10 @@
 -->
 <template>
   <main class="dialog">
-    <el-dialog
-      title=""
-      :visible.sync="dialogVisible"
-      width="width"
-      :before-close="dialogBeforeClose"
-    >
-      <div>
-        <el-table :data="[]" style="width: 100%">
-          <el-table-column
-            prop="prop"
-            label="label"
-            width="width"
-          ></el-table-column>
-        </el-table>
+    <el-dialog title="test" :visible.sync="dialogVisible" width="340px">
+      <div class="dialog__wrapper">
+        <div class="dialog__title">Title</div>
+        <DynamicForm></DynamicForm>
       </div>
       <div slot="footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
@@ -31,25 +21,36 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
+import DynamicForm from '../../../DynamicForm/index.vue';
 @Component({
   name: 'Dialog',
+  components: {
+    DynamicForm,
+  },
 })
 export default class extends Vue {
-  @Prop()
-  public visible!: boolean
-
-  public dialogVisible = false
+  public dialogVisible = false;
 
   created() {
-    console.log('created')
+    console.log('created');
   }
   public dialogBeforeClose() {
-    console.log('listen dialog before close')
+    console.log('listen dialog before close');
   }
   public onConfirm() {
-    console.log('listen on confirm')
+    console.log('listen on confirm');
   }
 }
 </script>
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.dialog {
+  height: 100%;
+  .dialog__wrapper {
+    padding: 20px;
+    .dialog__title {
+      font-size: 20px;
+    }
+  }
+}
+</style>
