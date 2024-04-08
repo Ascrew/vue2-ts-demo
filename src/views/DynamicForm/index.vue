@@ -22,6 +22,15 @@
         <el-form-item label="bbb" prop="bbb">
           <el-input v-model="item.bbb" placeholder=""></el-input>
         </el-form-item>
+        <el-time-picker
+          v-model="ccc"
+          value-format="hhMMss"
+          eholder="时间"
+          :picker-options="{
+            start: '00:08:30',
+            end: '10:23:30',
+          }"
+        ></el-time-picker>
       </el-form>
     </template>
     <el-button type="primary" @click="save()">save</el-button>
@@ -41,10 +50,12 @@ export default class extends Vue {
         {
           aaa: '',
           bbb: '',
+          ccc: '',
         },
         {
           aaa: '',
           bbb: '',
+          ccc: '',
         },
       ];
     }, 2000);

@@ -6,8 +6,8 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Swiper',
-    component: () => import('@/views/Popover/index.vue'),
+    name: 'Slots',
+    component: () => import('@/views/Swiper/index.vue'),
   },
   {
     path: '/demo',
