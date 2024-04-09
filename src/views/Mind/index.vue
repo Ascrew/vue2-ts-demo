@@ -24,7 +24,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import 'jsmind/style/jsmind.css';
 
 @Component({
-  name: 'mind',
+  name: 'mind'
 })
 export default class HomeView extends Vue {
   private mind = {
@@ -32,7 +32,7 @@ export default class HomeView extends Vue {
     meta: {
       name: '思维导图',
       author: 'hizzgdev@163.com',
-      version: '0.2',
+      version: '0.2'
     },
     /* 数据格式声明 */
     format: 'node_tree',
@@ -50,8 +50,8 @@ export default class HomeView extends Vue {
             { id: 'easy1', topic: 'Easy to show' },
             { id: 'easy2', topic: 'Easy to edit' },
             { id: 'easy3', topic: 'Easy to store' },
-            { id: 'easy4', topic: 'Easy to embed' },
-          ],
+            { id: 'easy4', topic: 'Easy to embed' }
+          ]
         },
         {
           id: 'open',
@@ -60,8 +60,8 @@ export default class HomeView extends Vue {
           expanded: true,
           children: [
             { id: 'open1', topic: 'on GitHub' },
-            { id: 'open2', topic: 'BSD License' },
-          ],
+            { id: 'open2', topic: 'BSD License' }
+          ]
         },
         {
           id: 'powerful',
@@ -70,8 +70,8 @@ export default class HomeView extends Vue {
           children: [
             { id: 'powerful1', topic: 'Base on Javascript' },
             { id: 'powerful2', topic: 'Base on HTML5' },
-            { id: 'powerful3', topic: 'Depends on you' },
-          ],
+            { id: 'powerful3', topic: 'Depends on you' }
+          ]
         },
         {
           id: 'other',
@@ -79,11 +79,11 @@ export default class HomeView extends Vue {
           direction: 'right',
           children: [
             { id: 'other1', topic: "I'm from local variable" },
-            { id: 'other2', topic: 'I can do everything' },
-          ],
-        },
-      ],
-    },
+            { id: 'other2', topic: 'I can do everything' }
+          ]
+        }
+      ]
+    }
   };
   private options = {
     container: 'jsmind_container', // [必选] 容器的ID
@@ -94,16 +94,16 @@ export default class HomeView extends Vue {
       hmargin: 120, // 思维导图距容器外框的最小水平距离
       vmargin: 50, // 思维导图距容器外框的最小垂直距离
       line_width: 2, // 思维导图线条的粗细
-      line_color: '#ddd', // 思维导图线条的颜色
+      line_color: '#ddd' // 思维导图线条的颜色
     },
     layout: {
       hspace: 100, // 节点之间的水平间距
       vspace: 20, // 节点之间的垂直间距
-      pspace: 20, // 节点与连接线之间的水平间距（用于容纳节点收缩/展开控制器）
+      pspace: 20 // 节点与连接线之间的水平间距（用于容纳节点收缩/展开控制器）
     },
     shortcut: {
-      enable: false, // 是否启用快捷键 默认为true
-    },
+      enable: false // 是否启用快捷键 默认为true
+    }
   };
 }
 </script>

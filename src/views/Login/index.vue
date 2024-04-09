@@ -37,12 +37,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 @Component({
-  name: 'Login',
+  name: 'Login'
 })
 export default class extends Vue {
   private loginForm: any = {
     username: '',
-    password: '',
+    password: ''
   };
 }
 </script>

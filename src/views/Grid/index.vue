@@ -25,26 +25,26 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 @Component({
-  name: 'Grid',
+  name: 'Grid'
 })
 export default class extends Vue {
   public list: any[] = [
     {
       title: '1',
-      num: '10000',
+      num: '10000'
     },
     {
       title: '1',
-      num: '10000',
+      num: '10000'
     },
     {
       title: '1',
-      num: '10000',
+      num: '10000'
     },
     {
       title: '1',
-      num: '10000',
-    },
+      num: '10000'
+    }
   ];
   public goToDemo() {
     this.$router.push('/gridLayout');

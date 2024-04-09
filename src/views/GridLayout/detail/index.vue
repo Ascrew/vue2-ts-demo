@@ -40,8 +40,8 @@ import VueGridLayout from 'vue-grid-layout';
   name: 'GridLayoutDemo',
   components: {
     GridLayout: VueGridLayout.GridLayout,
-    GridItem: VueGridLayout.GridItem,
-  },
+    GridItem: VueGridLayout.GridItem
+  }
 })
 export default class extends Vue {
   public layout: any = [
@@ -64,7 +64,7 @@ export default class extends Vue {
     { x: 8, y: 10, w: 2, h: 5, i: '16' },
     { x: 10, y: 4, w: 2, h: 2, i: '17' },
     { x: 0, y: 9, w: 2, h: 3, i: '18' },
-    { x: 2, y: 6, w: 2, h: 2, i: '19' },
+    { x: 2, y: 6, w: 2, h: 2, i: '19' }
   ];
 }
 </script>

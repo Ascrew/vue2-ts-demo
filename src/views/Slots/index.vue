@@ -18,7 +18,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import slot1 from './Components/slot-1.vue';
 @Component({
   components: { slot1 },
-  name: 'ZySlots',
+  name: 'ZySlots'
 })
 export default class extends Vue {
   mounted() {

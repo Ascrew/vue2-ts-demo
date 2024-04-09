@@ -26,8 +26,8 @@ import DynamicForm from '../../../DynamicForm/index.vue';
 @Component({
   name: 'Dialog',
   components: {
-    DynamicForm,
-  },
+    DynamicForm
+  }
 })
 export default class extends Vue {
   public dialogVisible = false;

@@ -18,8 +18,8 @@ import Dialog from './components/dialog/index.vue';
 @Component({
   name: 'ZyDialog',
   components: {
-    Dialog,
-  },
+    Dialog
+  }
 })
 export default class extends Vue {
   mounted() {

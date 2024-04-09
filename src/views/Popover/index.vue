@@ -17,7 +17,7 @@
         boundariesElement: 'body',
         gpuAcceleration: true,
         positionFixed: true,
-        preventOverflow: true,
+        preventOverflow: true
       }"
     >
       <el-input
@@ -34,7 +34,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 @Component({
-  name: 'Popover',
+  name: 'Popover'
 })
 export default class extends Vue {
   public filterText = '';

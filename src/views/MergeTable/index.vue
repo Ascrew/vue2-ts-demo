@@ -23,27 +23,27 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { MergeTable } from './modal';
 @Component({
-  name: 'MergeTable',
+  name: 'MergeTable'
 })
 export default class extends Vue {
   private columns = [
     {
       id: 'nd',
       label: '年度',
-      width: '100',
+      width: '100'
     },
 
     {
       id: 'type',
       label: '类型',
-      width: '100',
+      width: '100'
     },
 
     {
       id: 'content',
       label: '内容',
-      width: '100',
-    },
+      width: '100'
+    }
   ];
   private tableData: MergeTable[] = [];
 
@@ -53,57 +53,57 @@ export default class extends Vue {
         id: '1',
         nd: '2000',
         type: 'type1',
-        content: '111',
+        content: '111'
       },
       {
         id: '2',
         nd: '2000',
         type: 'type1',
-        content: '222',
+        content: '222'
       },
       {
         id: '3',
         nd: '2000',
         type: 'type2',
-        content: '333',
+        content: '333'
       },
       {
         id: '4',
         nd: '2000',
         type: 'type5',
-        content: '444',
+        content: '444'
       },
       {
         id: '5',
         nd: '3000',
         type: 'type5',
-        content: '555',
+        content: '555'
       },
       {
         id: '6',
         nd: '3000',
         type: 'type3',
-        content: '666',
+        content: '666'
       },
       {
         id: '7',
         nd: '3000',
         type: 'type4',
-        content: '777',
+        content: '777'
       },
       {
         id: '8',
         nd: '3000',
         type: 'type4',
-        content: '888',
-      },
+        content: '888'
+      }
     ];
     this.rowspan();
   }
 
   private row = {
     a: 1,
-    b: 2,
+    b: 2
   };
   private spanArr: number[] = [];
   private position = 0;
@@ -118,7 +118,7 @@ export default class extends Vue {
       const _col = _row > 0 ? 1 : 0; //合并的行数大于0那就只有一列，小于0就列数为0,相当于没了
       return {
         rowspan: _row,
-        colspan: _col,
+        colspan: _col
       };
     }
     if (columnIndex === 1) {
@@ -126,7 +126,7 @@ export default class extends Vue {
       const _col = _row > 0 ? 1 : 0;
       return {
         rowspan: _row,
-        colspan: _col,
+        colspan: _col
       };
     }
   }

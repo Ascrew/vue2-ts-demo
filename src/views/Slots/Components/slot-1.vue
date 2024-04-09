@@ -15,7 +15,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 @Component({
-  name: 'Slot1',
+  name: 'Slot1'
 })
 export default class extends Vue {
   created() {

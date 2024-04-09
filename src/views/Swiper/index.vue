@@ -55,8 +55,8 @@ import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
   name: 'PictureDetail',
   components: {
     Swiper,
-    SwiperSlide,
-  },
+    SwiperSlide
+  }
 })
 export default class extends Vue {
   @Prop({})
@@ -77,36 +77,36 @@ export default class extends Vue {
   public mediaList: any[] = [
     {
       title: '专题1',
-      url: 'https://pic2.zhimg.com/v2-4c02f9e56514e9a74e2f940daafdb9c9_b.jpg',
+      url: 'https://pic2.zhimg.com/v2-4c02f9e56514e9a74e2f940daafdb9c9_b.jpg'
     },
     {
       title: '专题2',
-      url: 'https://pic.allhistory.com/T1XzECBmZT1RCvBVdK.jpeg',
+      url: 'https://pic.allhistory.com/T1XzECBmZT1RCvBVdK.jpeg'
     },
     {
       title: '专题3',
-      url: 'https://pic.allhistory.com/T1XXhCB4LT1RCvBVdK.jpeg',
+      url: 'https://pic.allhistory.com/T1XXhCB4LT1RCvBVdK.jpeg'
     },
     {
       title: '专题4',
-      url: 'https://pic.allhistory.com/T1waWCB7YT1RCvBVdK.jpeg',
+      url: 'https://pic.allhistory.com/T1waWCB7YT1RCvBVdK.jpeg'
     },
     {
       title: '专题5',
-      url: 'https://pic.allhistory.com/T1ezhCB_dT1RCvBVdK.jpeg',
+      url: 'https://pic.allhistory.com/T1ezhCB_dT1RCvBVdK.jpeg'
     },
     {
       title: '专题6',
-      url: 'https://pic.allhistory.com/T1XyLCBCbT1RCvBVdK.jpeg',
+      url: 'https://pic.allhistory.com/T1XyLCBCbT1RCvBVdK.jpeg'
     },
     {
       title: '专题7',
-      url: 'https://pic.allhistory.com/T1GRWCBmAT1RCvBVdK.jpeg',
+      url: 'https://pic.allhistory.com/T1GRWCBmAT1RCvBVdK.jpeg'
     },
     {
       title: '专题8',
-      url: 'https://pic.allhistory.com/T1MXxCB5ET1RCvBVdK.jpeg',
-    },
+      url: 'https://pic.allhistory.com/T1MXxCB5ET1RCvBVdK.jpeg'
+    }
   ];
 
   public onChangeSwiperThumbnail(swiper: any) {
@@ -122,7 +122,7 @@ export default class extends Vue {
     loopSlides: 8,
     pagination: '.picture-detail--swiper-pagination',
     paginationType: 'fraction',
-    onSlideChangeEnd: (swiper: any) => this.onChangeSwiperThumbnail(swiper),
+    onSlideChangeEnd: (swiper: any) => this.onChangeSwiperThumbnail(swiper)
   };
 
   public onChangeSwiperTop(swiper: any) {
@@ -140,7 +140,7 @@ export default class extends Vue {
     slideToClickedSlide: true,
     prevButton: '.project-library--swiper-button-prev',
     nextButton: '.project-library--swiper-button-next',
-    onSlideChangeEnd: (swiper: any) => this.onChangeSwiperTop(swiper),
+    onSlideChangeEnd: (swiper: any) => this.onChangeSwiperTop(swiper)
   };
   public onChangeTest() {
     if (this.swiperThumbs) {

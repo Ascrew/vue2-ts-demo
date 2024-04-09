@@ -17,8 +17,8 @@ import Detail from './detail/index.vue';
 @Component({
   name: 'GridLayoutDemo',
   components: {
-    Detail,
-  },
+    Detail
+  }
 })
 export default class extends Vue {}
 </script>

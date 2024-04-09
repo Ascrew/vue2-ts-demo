@@ -28,7 +28,7 @@
           eholder="时间"
           :picker-options="{
             start: '00:08:30',
-            end: '10:23:30',
+            end: '10:23:30'
           }"
         ></el-time-picker>
       </el-form>
@@ -40,7 +40,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 @Component({
-  name: 'DynamicForm',
+  name: 'DynamicForm'
 })
 export default class extends Vue {
   public list: any = [];
@@ -50,13 +50,13 @@ export default class extends Vue {
         {
           aaa: '',
           bbb: '',
-          ccc: '',
+          ccc: ''
         },
         {
           aaa: '',
           bbb: '',
-          ccc: '',
-        },
+          ccc: ''
+        }
       ];
     }, 2000);
   }
@@ -87,7 +87,7 @@ export default class extends Vue {
     };
     return {
       aaa: [{ validator: validFunc2 }],
-      bbb: [{ validator: validFunc1 }],
+      bbb: [{ validator: validFunc1 }]
     };
   }
   public async save() {
