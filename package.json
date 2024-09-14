@@ -11,6 +11,7 @@
     "core-js": "^3.8.3",
     "element-ui": "^2.15.13",
     "jsmind": "^0.5.4",
+    "ofd.js": "^1.4.9",
     "stylus": "^0.59.0",
     "stylus-loader": "^7.1.0",
     "swiper": "^3.4.2",

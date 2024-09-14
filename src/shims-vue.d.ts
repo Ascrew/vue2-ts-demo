@@ -4,3 +4,4 @@ declare module '*.vue' {
 }
 declare module 'vue-grid-layout';
 declare module 'vue-jsmind';
+declare module 'ofd.js';

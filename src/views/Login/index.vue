@@ -49,9 +49,9 @@ export default class extends Vue {
 <style lang="stylus" scoped>
 .login
   width 100%
-  min-width 1200px
+  // min-width 1200px
   height 100vh
-  min-height 600px
+  // min-height 600px
   overflow hidden
   background-image url('~@/assets/login-bg.png')
   background-repeat no-repeat

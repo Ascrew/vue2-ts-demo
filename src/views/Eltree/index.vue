@@ -8,7 +8,7 @@
   <main class="el-tree-container">
     <el-tree
       show-checkbox
-      node-key="id"
+      :node-key="nodeKey"
       ref="tree"
       lazy
       highlight-current
@@ -17,6 +17,7 @@
       :load="loadNode"
       @node-click="onClickNode"
     ></el-tree>
+    <el-button @click="setCurrentKey">设置高亮 key</el-button>
     <el-button @click="getCheckedNodes">通过 node 获取</el-button>
     <el-button @click="getCheckedKeys">通过 key 获取</el-button>
     <el-button @click="setCheckedNodes">通过 node 设置</el-button>
@@ -34,6 +35,7 @@ import { Component, Vue } from 'vue-property-decorator';
   name: 'tree'
 })
 export default class extends Vue {
+  public nodeKey = 'uid';
   public id = 0;
 
   public deepClone(obj: any) {
@@ -60,27 +62,33 @@ export default class extends Vue {
   public sourceData: any[] = [
     {
       id: 0,
+      uid: 0,
       label: 0
     },
     {
       id: 1,
+      uid: 1,
       label: 1
     },
     {
       id: 2,
+      uid: 2,
       label: 2
     },
     {
       id: 3,
+      uid: 3,
       label: 3
     },
     {
       id: 4,
+      uid: 4,
       label: 4,
       isLeaf: true
     },
     {
       id: 5,
+      uid: 6,
       label: 5,
       isLeaf: true
     }
@@ -104,6 +112,7 @@ export default class extends Vue {
   public getCheckedKeys() {
     console.log(this.treeRef.getCheckedKeys());
   }
+
   public setCheckedNodes() {
     this.treeRef.setCheckedNodes([
       {
@@ -141,6 +150,10 @@ export default class extends Vue {
     let node = this.treeRef.getNode(this.treeRef.getCurrentNode().id);
     node.parent.loaded = false; // 设置节点为未加载状态
     node.parent.expand(); // 主动调用展开节点方法，重新查询该节点下的所有子节点
+  }
+
+  public setCurrentKey() {
+    this.treeRef.setCurrentKey(6);
   }
 }
 </script>

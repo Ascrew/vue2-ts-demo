@@ -8,7 +8,7 @@
 <template>
   <main class="table">
     <!-- <span v-for="item in '123'" :key="item">{{ item }}</span> -->
-    <el-table :data="tableData" style="width: 100%">
+    <el-table :data="tableData" border height="500" size="small">
       <el-table-column label="错误数据" width="180">
         <template slot-scope="scope">
           <div v-html="scope.row.text"></div>
@@ -21,14 +21,8 @@
         </template>
       </el-table-column>
       <el-table-column label="姓名" width="180">
-        <template slot-scope="scope">
-          <el-popover trigger="hover" placement="top">
-            <p>姓名: {{ scope.row.name }}</p>
-            <p>住址: {{ scope.row.address }}</p>
-            <div slot="reference" class="name-wrapper">
-              <el-tag size="medium">{{ scope.row.name }}</el-tag>
-            </div>
-          </el-popover>
+        <template>
+          <el-tag style="cursor: pointer">{{ 0 }}</el-tag>
         </template>
       </el-table-column>
       <el-table-column label="操作">

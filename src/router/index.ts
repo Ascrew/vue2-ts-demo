@@ -6,18 +6,8 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Slots',
-    component: () => import('@/views/Eltree/index.vue')
-  },
-  {
-    path: '/demo',
-    name: 'demo',
-    component: () => import('@/views/Grid/index.vue')
-  },
-  {
-    path: '/gridLayout',
-    name: 'GridLayoutDemo',
-    component: () => import('@/views/GridLayout/index.vue')
+    name: 'Ofd',
+    component: () => import('@/views/Ofd/index.vue')
   }
 ];
 
