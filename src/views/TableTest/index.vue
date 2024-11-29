@@ -8,7 +8,13 @@
 <template>
   <main class="table">
     <!-- <span v-for="item in '123'" :key="item">{{ item }}</span> -->
-    <el-table :data="tableData" border height="500" size="small">
+    <el-table
+      :data="tableData"
+      border
+      height="500"
+      size="small"
+      class="test-table"
+    >
       <el-table-column label="错误数据" width="180">
         <template slot-scope="scope">
           <div v-html="scope.row.text"></div>
@@ -25,6 +31,11 @@
           <el-tag style="cursor: pointer">{{ 0 }}</el-tag>
         </template>
       </el-table-column>
+      <el-table-column
+        label="地址"
+        width="180"
+        prop="address"
+      ></el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">
@@ -40,13 +51,19 @@
         </template>
       </el-table-column>
     </el-table>
+    <div>------------------------------------------------</div>
+    <SonTable></SonTable>
   </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import SonTable from './components/SonTable/index.vue';
 @Component({
-  name: 'Table'
+  name: 'Table',
+  components: {
+    SonTable
+  }
 })
 export default class extends Vue {
   public tableData: any[] = [
@@ -80,4 +97,10 @@ export default class extends Vue {
   }
 }
 </script>
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+>>> .test-table {
+  .el-table__cell {
+    padding: 0 0;
+  }
+}
+</style>

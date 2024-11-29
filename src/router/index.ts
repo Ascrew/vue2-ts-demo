@@ -6,8 +6,8 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Ofd',
-    component: () => import('@/views/Ofd/index.vue')
+    name: 'Table',
+    component: () => import('@/views/Transfer/index.vue')
   }
 ];
 
